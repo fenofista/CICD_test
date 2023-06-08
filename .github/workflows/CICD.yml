@@ -41,5 +41,5 @@ jobs:
         USERNAME: ${{secrets.USERNAME}}
         KEY: ${{secrets.SSHKEY}}
         script: | 
-          cd /Users/morikatatatsu/Desktop/工作/實習/中研院/temp
+          cd C:\Users\oplab\Desktop\CICD_test
           git pull https://github.com/fenofista/CICD_test.git
