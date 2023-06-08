@@ -35,9 +35,10 @@ jobs:
 #         cd flask
 #         bash test.sh
     - name: CD
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{secrets.HOST}}
+        PORT: ${{ secrets.PORT }}
         USERNAME: ${{secrets.USERNAME}}
         KEY: ${{secrets.SSHKEY}}
         script: | 
