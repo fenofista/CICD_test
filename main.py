@@ -35,6 +35,7 @@ def makeXandY(dataName):
 
 
 def main_oneTypeofResearchTarget():
+    print("main_oneTypeofResearchTarget")
     FORMAT = '%(asctime)s     %(levelname)s:  %(message)s'
     logging.basicConfig(
         format=FORMAT, filename=f"./logging_{researchTopicName}.txt", level=logging.DEBUG, filemode='w')

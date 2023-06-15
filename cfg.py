@@ -31,7 +31,7 @@ DataPipeline_cfg = {
     'file_names': [
                    "cvd1m_temp.csv", "cvd3m_temp.csv", "cvd6m_temp.csv", "cvd9m_temp.csv"],
     #after testParameters.py
-    "sm": BorderlineSMOTE(random_state = 0), 
+    "sm": BorderlineSMOTE(random_state = 0, m_neighbors=2, k_neighbors=1), 
     'threshold': 0.56,
     'eliminatedFeatures': None,
     }

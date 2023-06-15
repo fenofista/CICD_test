@@ -20,11 +20,14 @@ from sklearn.model_selection import StratifiedKFold
 import time
 import logging
 
+n_sample = 7
+n_splits = 3
+
 # In[]  
 #做10 fold並產出ROC curve
 def Print10foldScoreSmoteandDraw(classifier, sm, X, y, title, year, testsmResult=False, testParameters=True, threshold=0.4, xgbClassifier=False, testFI=False):
     #parameters
-    cv = StratifiedKFold(n_splits=10, shuffle = True, random_state = 0)   
+    cv = StratifiedKFold(n_splits=n_splits, shuffle = True, random_state = 0)   
     accs = []
     recs = []
     pres = []
@@ -47,6 +50,7 @@ def Print10foldScoreSmoteandDraw(classifier, sm, X, y, title, year, testsmResult
         feature_importances[i] = 0    
     start = time.time()
     #10 fold
+    print(len(X))
     for fold, (train_index, test_index) in enumerate(cv.split(X, y)):
         print("preceeding: ", f"{fold+1} fold")
         logging.info(f"preceeding: {fold+1} fold")
@@ -56,6 +60,7 @@ def Print10foldScoreSmoteandDraw(classifier, sm, X, y, title, year, testsmResult
         y_test = y.loc[test_index].values.ravel()
         
         #fit
+        print(sm)
         X_train_oversampled, y_train_oversampled = sm.fit_resample(X_train, y_train)
         classifier.fit(X_train_oversampled, y_train_oversampled)
         

@@ -20,11 +20,14 @@ from sklearn.model_selection import StratifiedKFold
 import time
 import logging
 
+n_sample = 7
+
+
 # In[]  
 #做10 fold並產出ROC curve
 def Print10foldScoreSmoteandDraw(classifier, sm, X, y, title, year, testsmResult=False, testParameters=True, threshold=0.4, xgbClassifier=False, testFI=False):
     #parameters
-    cv = StratifiedKFold(n_splits=10, shuffle = True, random_state = 0)   
+    cv = StratifiedKFold(n_splits=n_sample, shuffle = True, random_state = 0)   
     accs = []
     recs = []
     pres = []
