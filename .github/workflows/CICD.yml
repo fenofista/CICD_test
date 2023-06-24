@@ -45,5 +45,5 @@ jobs:
         PASSWORD: ${{secrets.PASSWORD}}
         KEY: ${{secrets.SSHKEY}}
         script: | 
-          cd C:\Users\oplab\Desktop\CICD_test
+          cd C:\Users\oplab\Desktop\
           git pull https://github.com/fenofista/CICD_test.git
