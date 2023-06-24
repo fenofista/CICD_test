@@ -42,6 +42,7 @@ jobs:
         host: ${{secrets.HOST}}
         PORT: ${{ secrets.PORT }}
         USERNAME: ${{secrets.USERNAME}}
+        PASSWORD: ${{secrets.PASSWORD}}
         KEY: ${{secrets.SSHKEY}}
         script: | 
           cd C:\Users\oplab\Desktop\CICD_test
