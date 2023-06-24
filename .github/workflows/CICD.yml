@@ -36,13 +36,13 @@ jobs:
 #       run: |
 #         cd flask
 #         bash test.sh
-#     - name: CD
-#       uses: appleboy/ssh-action@v0.1.10
-#       with:
-#         host: ${{secrets.HOST}}
-#         PORT: ${{ secrets.PORT }}
-#         USERNAME: ${{secrets.USERNAME}}
-#         KEY: ${{secrets.SSHKEY}}
-#         script: | 
-#           cd C:\Users\oplab\Desktop\CICD_test
-#           git pull https://github.com/fenofista/CICD_test.git
+    - name: CD
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{secrets.HOST}}
+        PORT: ${{ secrets.PORT }}
+        USERNAME: ${{secrets.USERNAME}}
+        KEY: ${{secrets.SSHKEY}}
+        script: | 
+          cd C:\Users\oplab\Desktop\CICD_test
+          git pull https://github.com/fenofista/CICD_test.git
