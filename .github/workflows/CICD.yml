@@ -36,7 +36,7 @@ jobs:
 #       run: |
 #         cd flask
 #         bash test.sh
-    - name: CD
+    - name: Connect ssh
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{secrets.HOST}}
@@ -44,8 +44,13 @@ jobs:
         USERNAME: ${{secrets.USERNAME}}
         PASSWORD: ${{secrets.PASSWORD}}
         KEY: ${{secrets.SSHKEY}}
-        script: | 
-          cd C:\Users\oplab\Desktop\
-          git pull https://github.com/fenofista/CICD_test.git
-          cd CICD_test
-          jupyter notebook --port=1111
+    - name: CD
+      run: |
+        cd C:\Users\oplab\Desktop\
+        git pull https://github.com/fenofista/CICD_test.git
+        cd CICD_test
+#   script: | 
+#     cd C:\Users\oplab\Desktop\
+#     git pull https://github.com/fenofista/CICD_test.git
+#     cd CICD_test
+#     jupyter notebook --port=1111
