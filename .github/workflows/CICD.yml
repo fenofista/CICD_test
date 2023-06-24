@@ -48,4 +48,4 @@ jobs:
           cd C:\Users\oplab\Desktop\
           git pull https://github.com/fenofista/CICD_test.git
           cd CICD_test
-          python main.py
+          jupyter notebook --port=1111
