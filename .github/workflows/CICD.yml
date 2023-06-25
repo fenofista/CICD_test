@@ -44,11 +44,17 @@ jobs:
         USERNAME: ${{secrets.USERNAME}}
         PASSWORD: ${{secrets.PASSWORD}}
         KEY: ${{secrets.SSHKEY}}
-    - name: CD
-      run: |
-        cd C:\Users\oplab\Desktop\
-        git pull https://github.com/fenofista/CICD_test.git
-        cd CICD_test
+        script: | 
+          cd C:\Users\oplab\Desktop\
+          git pull https://github.com/fenofista/CICD_test.git
+          docker build -t cicd_test CICD_test
+          docker run cicd_test:latest
+#     - name: CD
+#       run: |
+#         cd C:\Users\oplab\Desktop\
+#         git pull https://github.com/fenofista/CICD_test.git
+#         docker build -t cicd_test CICD_test
+#         docker run cicd_test:latest
 #   script: | 
 #     cd C:\Users\oplab\Desktop\
 #     git pull https://github.com/fenofista/CICD_test.git
