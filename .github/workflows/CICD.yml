@@ -57,7 +57,7 @@ jobs:
           python main.py
           git add .
           git commit -m "training"
-          git push origin main
+          git push
 #     - name: CD
 #       run: |
 #         cd C:\Users\oplab\Desktop\
