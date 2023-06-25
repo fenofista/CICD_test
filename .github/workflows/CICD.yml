@@ -1,5 +1,6 @@
 name: Hight_blood_pressure CICD
- 
+permissions:
+  contents: write
 # 觸發條件
 on:
   push:
