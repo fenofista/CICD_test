@@ -58,7 +58,7 @@ def main_oneTypeofResearchTarget():
         total_result = pd.concat([total_result, df], axis = 0)                  #1個topic有12個entries
         print()
         
-    total_result.to_csv(f"{researchTopicName}.csv", encoding='utf_8_sig', line_terminator='\n', index=True)
+    total_result.to_csv(f"{researchTopicName}.csv", encoding='utf_8_sig', lineterminator='\n', index=True)
     return total_result
     
     

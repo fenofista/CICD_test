@@ -1,9 +1,9 @@
-FROM alpine
+FROM python:latest
 
-WORKDIR /src
+WORKDIR /usr/app/src
 
-EXPOSE 8888
+COPY Program ./
 
-ENTRYPOINT [ "/src/server" ]
+RUN pip install -r requirement.txt
 
-CMD [python main.py]
+CMD ["python", "main.py"]
