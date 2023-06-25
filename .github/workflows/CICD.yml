@@ -10,7 +10,7 @@ on:
 # 執行一項或多項任務
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
     strategy:
       max-parallel: 4
       matrix:
@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
  
@@ -27,28 +27,49 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirement.txt
+        pip install -r Program/requirement.txt
 #     - name: Infernece
 #       run : |
-#         python main.py
+#         python Program/main.py
 #     # 運行測試
 #     - name: Run Tests
 #       run: |
 #         cd flask
 #         bash test.sh
-    - name: Connect ssh
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{secrets.HOST}}
-        PORT: ${{ secrets.PORT }}
-        USERNAME: ${{secrets.USERNAME}}
-        PASSWORD: ${{secrets.PASSWORD}}
-        KEY: ${{secrets.SSHKEY}}
+#     - name: Connect ssh
+#       uses: appleboy/ssh-action@v0.1.10
+#       with:
+#         host: ${{secrets.HOST}}
+#         PORT: ${{ secrets.PORT }}
+#         USERNAME: ${{secrets.USERNAME}}
+#         PASSWORD: ${{secrets.PASSWORD}}
+#         KEY: ${{secrets.SSHKEY}}
+#         script: | 
+#           cd C:\Users\oplab\Desktop\
+#           git pull https://github.com/fenofista/CICD_test.git
+#           docker build -t cicd_test CICD_test
+#           docker run cicd_test:latest
     - name: CD
       run: |
-        cd C:\Users\oplab\Desktop\
-        git pull https://github.com/fenofista/CICD_test.git
-        cd CICD_test
+          cd C:\Users\oplab\Desktop\
+          git clone https://github.com/fenofista/CICD_test.git
+          cd CICD_test/Program
+          python main.py
+    - name: commit
+      run: |
+          git add .
+          git commit -m "training"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+#     - name: CD
+#       run: |
+#         cd C:\Users\oplab\Desktop\
+#         git pull https://github.com/fenofista/CICD_test.git
+#         docker build -t cicd_test CICD_test
+#         docker run cicd_test:latest
 #   script: | 
 #     cd C:\Users\oplab\Desktop\
 #     git pull https://github.com/fenofista/CICD_test.git
