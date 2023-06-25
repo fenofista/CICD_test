@@ -49,6 +49,11 @@ jobs:
           git pull https://github.com/fenofista/CICD_test.git
           docker build -t cicd_test CICD_test
           docker run cicd_test:latest
+      run: |
+          cd C:\Users\oplab\Desktop\
+          git pull https://github.com/fenofista/CICD_test.git
+          docker build -t cicd_test CICD_test
+          docker run cicd_test:latest
 #     - name: CD
 #       run: |
 #         cd C:\Users\oplab\Desktop\
