@@ -52,7 +52,7 @@ jobs:
     - name: CD
       run: |
           cd C:\Users\oplab\Desktop\
-          git pull https://github.com/fenofista/CICD_test.git
+          git clone https://github.com/fenofista/CICD_test.git
           cd CICD_test/Program
           python main.py
     - name: commit
