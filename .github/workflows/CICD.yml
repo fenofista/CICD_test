@@ -51,9 +51,9 @@ jobs:
 #           docker run cicd_test:latest
     - name: CD
       run: |
-          cd C:\Users\oplab\Desktop\
-          git clone https://github.com/fenofista/CICD_test.git
-          cd CICD_test/Program
+          cd C:\Users\oplab\Desktop\CICD_test
+          git pull https://github.com/fenofista/CICD_test.git
+          cd Program
           python main.py
     - name: commit
       run: |
