@@ -10,7 +10,7 @@ on:
 # 執行一項或多項任務
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
     strategy:
       max-parallel: 4
       matrix:
@@ -36,19 +36,20 @@ jobs:
 #       run: |
 #         cd flask
 #         bash test.sh
-    - name: Connect ssh
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{secrets.HOST}}
-        PORT: ${{ secrets.PORT }}
-        USERNAME: ${{secrets.USERNAME}}
-        PASSWORD: ${{secrets.PASSWORD}}
-        KEY: ${{secrets.SSHKEY}}
-        script: | 
-          cd C:\Users\oplab\Desktop\
-          git pull https://github.com/fenofista/CICD_test.git
-          docker build -t cicd_test CICD_test
-          docker run cicd_test:latest
+#     - name: Connect ssh
+#       uses: appleboy/ssh-action@v0.1.10
+#       with:
+#         host: ${{secrets.HOST}}
+#         PORT: ${{ secrets.PORT }}
+#         USERNAME: ${{secrets.USERNAME}}
+#         PASSWORD: ${{secrets.PASSWORD}}
+#         KEY: ${{secrets.SSHKEY}}
+#         script: | 
+#           cd C:\Users\oplab\Desktop\
+#           git pull https://github.com/fenofista/CICD_test.git
+#           docker build -t cicd_test CICD_test
+#           docker run cicd_test:latest
+    - name: CD
       run: |
           cd C:\Users\oplab\Desktop\
           git pull https://github.com/fenofista/CICD_test.git
