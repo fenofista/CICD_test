@@ -58,6 +58,8 @@ jobs:
     - name: commit
       run: |
           cd C:\Users\oplab\Desktop\CICD_test
+          git config --local user.email "s960068sss@github.com"
+          git config --local user.name "fenofista"
           git add .
           git commit -m "training"
     - name: Push changes
