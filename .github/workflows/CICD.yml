@@ -62,6 +62,7 @@ jobs:
           git config --local user.name "fenofista"
           git add .
           git commit -m "training"
+          cd ../
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
