@@ -55,9 +55,15 @@ jobs:
           git pull https://github.com/fenofista/CICD_test.git
           cd CICD_test/Program
           python main.py
+    - name: commit
+      run: |
           git add .
           git commit -m "training"
-          git push
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
 #     - name: CD
 #       run: |
 #         cd C:\Users\oplab\Desktop\
