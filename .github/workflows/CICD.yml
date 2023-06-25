@@ -63,9 +63,8 @@ jobs:
           git config --local user.name "fenofista"
           git add .
           git commit -m "training"
-          git push https://${{ secrets.GH_TOKEN_TEST }}@github.com/fenofista/CICD_test.git
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@v1
       with:
         github_token: ${{ secrets.GH_TOKEN_TEST }}
         branch: main
