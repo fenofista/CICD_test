@@ -53,8 +53,8 @@ jobs:
       run: |
           cd C:\Users\oplab\Desktop\
           git pull https://github.com/fenofista/CICD_test.git
-          cd CICD_test
-          python Program/main.py
+          cd CICD_test/Program
+          python main.py
           git add .
           git commit -m "training"
           git push origin main
