@@ -57,6 +57,7 @@ jobs:
           python main.py
     - name: commit
       run: |
+          cd C:\Users\oplab\Desktop\CICD_test
           git add .
           git commit -m "training"
     - name: Push changes
