@@ -1,64 +1,64 @@
-2023-06-26 23:40:54,400     INFO:  processing: 1m_temp
-2023-06-26 23:40:54,402     INFO:  now processing: XBG
-2023-06-26 23:40:54,402     INFO:  preceeding: 1 fold
-2023-06-26 23:40:54,653     INFO:  preceeding: 2 fold
-2023-06-26 23:40:54,881     INFO:  preceeding: 3 fold
-2023-06-26 23:40:55,117     INFO:  total time : 0.7141890525817871
-2023-06-26 23:40:55,120     INFO:  now processing: RF
-2023-06-26 23:40:55,121     INFO:  preceeding: 1 fold
-2023-06-26 23:40:55,846     INFO:  preceeding: 2 fold
-2023-06-26 23:40:56,541     INFO:  preceeding: 3 fold
-2023-06-26 23:40:57,239     INFO:  total time : 2.11899471282959
-2023-06-26 23:40:57,242     INFO:  now processing: DTB
-2023-06-26 23:40:57,242     INFO:  preceeding: 1 fold
-2023-06-26 23:40:57,654     INFO:  preceeding: 2 fold
-2023-06-26 23:40:58,076     INFO:  preceeding: 3 fold
-2023-06-26 23:40:58,494     INFO:  total time : 1.2522757053375244
-2023-06-26 23:40:58,496     INFO:  processing: 3m_temp
-2023-06-26 23:40:58,497     INFO:  now processing: XBG
-2023-06-26 23:40:58,497     INFO:  preceeding: 1 fold
-2023-06-26 23:40:58,718     INFO:  preceeding: 2 fold
-2023-06-26 23:40:58,938     INFO:  preceeding: 3 fold
-2023-06-26 23:40:59,164     INFO:  total time : 0.6670098304748535
-2023-06-26 23:40:59,166     INFO:  now processing: RF
-2023-06-26 23:40:59,167     INFO:  preceeding: 1 fold
-2023-06-26 23:40:59,888     INFO:  preceeding: 2 fold
-2023-06-26 23:41:00,574     INFO:  preceeding: 3 fold
-2023-06-26 23:41:01,269     INFO:  total time : 2.1020724773406982
-2023-06-26 23:41:01,270     INFO:  now processing: DTB
-2023-06-26 23:41:01,271     INFO:  preceeding: 1 fold
-2023-06-26 23:41:01,676     INFO:  preceeding: 2 fold
-2023-06-26 23:41:02,084     INFO:  preceeding: 3 fold
-2023-06-26 23:41:02,493     INFO:  total time : 1.222822904586792
-2023-06-26 23:41:02,495     INFO:  processing: 6m_temp
-2023-06-26 23:41:02,497     INFO:  now processing: XBG
-2023-06-26 23:41:02,497     INFO:  preceeding: 1 fold
-2023-06-26 23:41:02,711     INFO:  preceeding: 2 fold
-2023-06-26 23:41:02,931     INFO:  preceeding: 3 fold
-2023-06-26 23:41:03,147     INFO:  total time : 0.6498458385467529
-2023-06-26 23:41:03,149     INFO:  now processing: RF
-2023-06-26 23:41:03,150     INFO:  preceeding: 1 fold
-2023-06-26 23:41:03,878     INFO:  preceeding: 2 fold
-2023-06-26 23:41:04,573     INFO:  preceeding: 3 fold
-2023-06-26 23:41:05,272     INFO:  total time : 2.122637987136841
-2023-06-26 23:41:05,273     INFO:  now processing: DTB
-2023-06-26 23:41:05,274     INFO:  preceeding: 1 fold
-2023-06-26 23:41:05,681     INFO:  preceeding: 2 fold
-2023-06-26 23:41:06,091     INFO:  preceeding: 3 fold
-2023-06-26 23:41:06,501     INFO:  total time : 1.2273316383361816
-2023-06-26 23:41:06,504     INFO:  processing: 9m_temp
-2023-06-26 23:41:06,505     INFO:  now processing: XBG
-2023-06-26 23:41:06,506     INFO:  preceeding: 1 fold
-2023-06-26 23:41:06,729     INFO:  preceeding: 2 fold
-2023-06-26 23:41:06,944     INFO:  preceeding: 3 fold
-2023-06-26 23:41:07,162     INFO:  total time : 0.6565749645233154
-2023-06-26 23:41:07,164     INFO:  now processing: RF
-2023-06-26 23:41:07,164     INFO:  preceeding: 1 fold
-2023-06-26 23:41:07,891     INFO:  preceeding: 2 fold
-2023-06-26 23:41:08,587     INFO:  preceeding: 3 fold
-2023-06-26 23:41:09,282     INFO:  total time : 2.1178250312805176
-2023-06-26 23:41:09,284     INFO:  now processing: DTB
-2023-06-26 23:41:09,285     INFO:  preceeding: 1 fold
-2023-06-26 23:41:09,691     INFO:  preceeding: 2 fold
-2023-06-26 23:41:10,101     INFO:  preceeding: 3 fold
-2023-06-26 23:41:10,510     INFO:  total time : 1.226590871810913
+2023-06-26 23:41:48,053     INFO:  processing: 1m_temp
+2023-06-26 23:41:48,055     INFO:  now processing: XBG
+2023-06-26 23:41:48,055     INFO:  preceeding: 1 fold
+2023-06-26 23:41:48,310     INFO:  preceeding: 2 fold
+2023-06-26 23:41:48,543     INFO:  preceeding: 3 fold
+2023-06-26 23:41:48,778     INFO:  total time : 0.7234086990356445
+2023-06-26 23:41:48,781     INFO:  now processing: RF
+2023-06-26 23:41:48,782     INFO:  preceeding: 1 fold
+2023-06-26 23:41:49,554     INFO:  preceeding: 2 fold
+2023-06-26 23:41:50,280     INFO:  preceeding: 3 fold
+2023-06-26 23:41:51,016     INFO:  total time : 2.235203504562378
+2023-06-26 23:41:51,018     INFO:  now processing: DTB
+2023-06-26 23:41:51,019     INFO:  preceeding: 1 fold
+2023-06-26 23:41:51,448     INFO:  preceeding: 2 fold
+2023-06-26 23:41:51,880     INFO:  preceeding: 3 fold
+2023-06-26 23:41:52,327     INFO:  total time : 1.3083961009979248
+2023-06-26 23:41:52,329     INFO:  processing: 3m_temp
+2023-06-26 23:41:52,330     INFO:  now processing: XBG
+2023-06-26 23:41:52,331     INFO:  preceeding: 1 fold
+2023-06-26 23:41:52,555     INFO:  preceeding: 2 fold
+2023-06-26 23:41:52,792     INFO:  preceeding: 3 fold
+2023-06-26 23:41:53,028     INFO:  total time : 0.698188066482544
+2023-06-26 23:41:53,030     INFO:  now processing: RF
+2023-06-26 23:41:53,031     INFO:  preceeding: 1 fold
+2023-06-26 23:41:53,788     INFO:  preceeding: 2 fold
+2023-06-26 23:41:54,510     INFO:  preceeding: 3 fold
+2023-06-26 23:41:55,247     INFO:  total time : 2.215538263320923
+2023-06-26 23:41:55,249     INFO:  now processing: DTB
+2023-06-26 23:41:55,249     INFO:  preceeding: 1 fold
+2023-06-26 23:41:55,680     INFO:  preceeding: 2 fold
+2023-06-26 23:41:56,111     INFO:  preceeding: 3 fold
+2023-06-26 23:41:56,546     INFO:  total time : 1.2976245880126953
+2023-06-26 23:41:56,548     INFO:  processing: 6m_temp
+2023-06-26 23:41:56,550     INFO:  now processing: XBG
+2023-06-26 23:41:56,550     INFO:  preceeding: 1 fold
+2023-06-26 23:41:56,776     INFO:  preceeding: 2 fold
+2023-06-26 23:41:57,010     INFO:  preceeding: 3 fold
+2023-06-26 23:41:57,249     INFO:  total time : 0.6991872787475586
+2023-06-26 23:41:57,251     INFO:  now processing: RF
+2023-06-26 23:41:57,252     INFO:  preceeding: 1 fold
+2023-06-26 23:41:58,017     INFO:  preceeding: 2 fold
+2023-06-26 23:41:58,726     INFO:  preceeding: 3 fold
+2023-06-26 23:41:59,426     INFO:  total time : 2.1747312545776367
+2023-06-26 23:41:59,428     INFO:  now processing: DTB
+2023-06-26 23:41:59,428     INFO:  preceeding: 1 fold
+2023-06-26 23:41:59,838     INFO:  preceeding: 2 fold
+2023-06-26 23:42:00,252     INFO:  preceeding: 3 fold
+2023-06-26 23:42:00,667     INFO:  total time : 1.2386937141418457
+2023-06-26 23:42:00,669     INFO:  processing: 9m_temp
+2023-06-26 23:42:00,670     INFO:  now processing: XBG
+2023-06-26 23:42:00,671     INFO:  preceeding: 1 fold
+2023-06-26 23:42:00,888     INFO:  preceeding: 2 fold
+2023-06-26 23:42:01,111     INFO:  preceeding: 3 fold
+2023-06-26 23:42:01,333     INFO:  total time : 0.6624956130981445
+2023-06-26 23:42:01,335     INFO:  now processing: RF
+2023-06-26 23:42:01,336     INFO:  preceeding: 1 fold
+2023-06-26 23:42:02,065     INFO:  preceeding: 2 fold
+2023-06-26 23:42:02,767     INFO:  preceeding: 3 fold
+2023-06-26 23:42:03,471     INFO:  total time : 2.135470151901245
+2023-06-26 23:42:03,473     INFO:  now processing: DTB
+2023-06-26 23:42:03,473     INFO:  preceeding: 1 fold
+2023-06-26 23:42:03,884     INFO:  preceeding: 2 fold
+2023-06-26 23:42:04,296     INFO:  preceeding: 3 fold
+2023-06-26 23:42:04,708     INFO:  total time : 1.2354614734649658
