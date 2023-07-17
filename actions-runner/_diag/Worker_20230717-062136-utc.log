@@ -2953,3 +2953,987 @@
 [2023-07-17 06:21:43Z INFO ProcessInvokerWrapper] Process started with process id 14144, waiting for process exit.
 [2023-07-17 06:21:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record '343f183f-0c51-507a-bc97-253f52a97a90', success rate: 1/1.
 [2023-07-17 06:21:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:21:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:21:45Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-07-17 06:21:48Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Finished process 14144 with exit code 0, and elapsed time 00:00:06.3206580.
+[2023-07-17 06:21:50Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_b9078fa9-4288-4091-a375-68055223ab85) is empty; skipping attachment upload
+[2023-07-17 06:21:50Z INFO StepsRunner] Step result: 
+[2023-07-17 06:21:50Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "d931e820-c2c2-53b7-f055-9e5a6e8823ef",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 7,
+  "startTime": "2023-07-17T06:21:43.8911502Z",
+  "finishTime": "2023-07-17T06:21:50.2393636Z"
+}.
+[2023-07-17 06:21:50Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:21:50Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:21:50Z INFO StepsRunner] Processing step: DisplayName='Infernece'
+[2023-07-17 06:21:50Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:21:50Z INFO StepsRunner] Result: true
+[2023-07-17 06:21:50Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:50Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:21:50Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Process started with process id 19476, waiting for process exit.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Finished process 19476 with exit code 0, and elapsed time 00:00:00.0056753.
+[2023-07-17 06:21:50Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:21:50Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:21:50Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:21:50Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:21:50Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:21:50Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:21:50Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:21:50Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:21:50Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\30040bb7-c252-4c15-ae23-59f9ef318ce0.ps1'"'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:21:50Z INFO ProcessInvokerWrapper] Process started with process id 2512, waiting for process exit.
+[2023-07-17 06:21:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 1/1.
+[2023-07-17 06:21:50Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:21:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:21:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:21:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 1/1.
+[2023-07-17 06:22:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Finished process 2512 with exit code 0, and elapsed time 00:00:18.2323972.
+[2023-07-17 06:22:08Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_cfa6c960-ed30-4cb0-addd-f1e2946520c0) is empty; skipping attachment upload
+[2023-07-17 06:22:08Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 19,
+  "startTime": "2023-07-17T06:21:50.2400562Z",
+  "finishTime": "2023-07-17T06:22:08.4937275Z"
+}.
+[2023-07-17 06:22:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:08Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:08Z INFO StepsRunner] Processing step: DisplayName='CD'
+[2023-07-17 06:22:08Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:08Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:08Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:08Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Process started with process id 19564, waiting for process exit.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Finished process 19564 with exit code 0, and elapsed time 00:00:00.0053608.
+[2023-07-17 06:22:08Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:08Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:08Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:08Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:08Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:08Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:08Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\697e25c1-9bf2-4d3a-b9f9-2783dd45d11f.ps1'"'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:08Z INFO JobServerQueue] Try to append 2 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 2/2.
+[2023-07-17 06:22:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '052daa24-5f49-5773-d562-2094f3e133be', success rate: 1/1.
+[2023-07-17 06:22:08Z INFO ProcessInvokerWrapper] Process started with process id 10864, waiting for process exit.
+[2023-07-17 06:22:09Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:22:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '052daa24-5f49-5773-d562-2094f3e133be', success rate: 1/1.
+[2023-07-17 06:22:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record '052daa24-5f49-5773-d562-2094f3e133be', success rate: 1/1.
+[2023-07-17 06:22:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:21Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:21Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:21Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Finished process 10864 with exit code 0, and elapsed time 00:00:18.4933831.
+[2023-07-17 06:22:27Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_1794117a-74a4-48aa-99ac-48117a1156fe) is empty; skipping attachment upload
+[2023-07-17 06:22:27Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:27Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "052daa24-5f49-5773-d562-2094f3e133be",
+  "stepContextName": "__run_3",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 19,
+  "startTime": "2023-07-17T06:22:08.4942193Z",
+  "finishTime": "2023-07-17T06:22:27.0061661Z"
+}.
+[2023-07-17 06:22:27Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:27Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:27Z INFO StepsRunner] Processing step: DisplayName='commit'
+[2023-07-17 06:22:27Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:27Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:27Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:27Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Process started with process id 14640, waiting for process exit.
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Finished process 14640 with exit code 0, and elapsed time 00:00:00.0052670.
+[2023-07-17 06:22:27Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:27Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:27Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:27Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:27Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:27Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:27Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:27Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\e74c9735-17fd-4d2e-8bdd-a698231f2619.ps1'"'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:27Z INFO ProcessInvokerWrapper] Process started with process id 24028, waiting for process exit.
+[2023-07-17 06:22:27Z INFO JobServerQueue] Try to append 2 batches web console lines for record '052daa24-5f49-5773-d562-2094f3e133be', success rate: 2/2.
+[2023-07-17 06:22:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '89858131-5e73-5223-9cfa-bce1cb2d6969', success rate: 1/1.
+[2023-07-17 06:22:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '89858131-5e73-5223-9cfa-bce1cb2d6969', success rate: 1/1.
+[2023-07-17 06:22:27Z INFO JobServerQueue] Try to append 3 batches web console lines for record '89858131-5e73-5223-9cfa-bce1cb2d6969', success rate: 3/3.
+[2023-07-17 06:22:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record '89858131-5e73-5223-9cfa-bce1cb2d6969', success rate: 1/1.
+[2023-07-17 06:22:28Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Finished process 24028 with exit code 0, and elapsed time 00:00:02.9254432.
+[2023-07-17 06:22:29Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_5c02b128-acec-41bf-8d4f-295369ba2a76) is empty; skipping attachment upload
+[2023-07-17 06:22:29Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:29Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "89858131-5e73-5223-9cfa-bce1cb2d6969",
+  "stepContextName": "__run_4",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2023-07-17T06:22:27.0066266Z",
+  "finishTime": "2023-07-17T06:22:29.9519928Z"
+}.
+[2023-07-17 06:22:29Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:29Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:29Z INFO StepsRunner] Processing step: DisplayName='Post Set up Python 3.7'
+[2023-07-17 06:22:29Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:29Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:29Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:29Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Process started with process id 16016, waiting for process exit.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Finished process 16016 with exit code 0, and elapsed time 00:00:00.0052645.
+[2023-07-17 06:22:29Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:29Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\setup-python\v3'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Ignore action property author.
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Ignore action property branding.
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Python",
+  "description": "Set up a specific version of Python and add the command-line tools to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 6,
+          "col": 3,
+          "lit": "python-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 14,
+          "lit": "3.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 9,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:29Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:29Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2023-07-17 06:22:29Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:29Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:29Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Input 'cache': default value evaluate result: ""
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Input 'architecture': default value evaluate result: ""
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 16,
+  "col": 14,
+  "lit": "***"
+}
+[2023-07-17 06:22:29Z INFO ActionManifestManager] Input 'cache-dependency-path': default value evaluate result: ""
+[2023-07-17 06:22:29Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:29Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:29Z INFO HostContext] Well known directory 'Externals': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals\node16\bin\node.exe'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\setup-python\v3\dist/cache-save/index.js"'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:29Z INFO ProcessInvokerWrapper] Process started with process id 15868, waiting for process exit.
+[2023-07-17 06:22:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record '89858131-5e73-5223-9cfa-bce1cb2d6969', success rate: 1/1.
+[2023-07-17 06:22:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record '80ec0892-a79f-4d9d-bcb7-59867f658b3a', success rate: 1/1.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Finished process 15868 with exit code 0, and elapsed time 00:00:00.1043603.
+[2023-07-17 06:22:30Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_f2ef1b05-cdf2-4375-823a-1c2e4e832898) is empty; skipping attachment upload
+[2023-07-17 06:22:30Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:30Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/setup-python",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Post",
+  "stepId": "80ec0892-a79f-4d9d-bcb7-59867f658b3a",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:29.9524519Z",
+  "finishTime": "2023-07-17T06:22:30.0710384Z"
+}.
+[2023-07-17 06:22:30Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:30Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:30Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v3'
+[2023-07-17 06:22:30Z INFO StepsRunner] Evaluating: always()
+[2023-07-17 06:22:30Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:30Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:30Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Process started with process id 15900, waiting for process exit.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Finished process 15900 with exit code 0, and elapsed time 00:00:00.0054054.
+[2023-07-17 06:22:30Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:30Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:30Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:30Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-07-17 06:22:30Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:30Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:30Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "fenofista/CICD_test"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:30Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2023-07-17 06:22:30Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:30Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:30Z INFO HostContext] Well known directory 'Externals': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals\node16\bin\node.exe'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:30Z INFO ProcessInvokerWrapper] Process started with process id 15464, waiting for process exit.
+[2023-07-17 06:22:30Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2023-07-17 06:22:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record '872ed88e-f24f-42e5-ac67-190374b46295', success rate: 1/1.
+[2023-07-17 06:22:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record '872ed88e-f24f-42e5-ac67-190374b46295', success rate: 1/1.
+[2023-07-17 06:22:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record '872ed88e-f24f-42e5-ac67-190374b46295', success rate: 1/1.
+[2023-07-17 06:22:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:31Z INFO ProcessInvokerWrapper] Finished process 15464 with exit code 0, and elapsed time 00:00:00.9205697.
+[2023-07-17 06:22:31Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_871d9cd2-383b-4b2c-98a1-71eb06bea309) is empty; skipping attachment upload
+[2023-07-17 06:22:31Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:31Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Post",
+  "stepId": "872ed88e-f24f-42e5-ac67-190374b46295",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:30.0715578Z",
+  "finishTime": "2023-07-17T06:22:31.0069919Z"
+}.
+[2023-07-17 06:22:31Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:31Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:31Z INFO JobRunner] Finalize job.
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:31Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:31Z INFO JobExtension] Initialize Env context
+[2023-07-17 06:22:31Z INFO JobExtension] Initialize steps context
+[2023-07-17 06:22:31Z INFO JobExtension] Total accessible running process: 232.
+[2023-07-17 06:22:31Z INFO JobExtension] Inspecting process environment variables. PID: 21212 (SearchProtocolHost)
+[2023-07-17 06:22:31Z WARN JobExtension] Ignore exception during read process environment variables: 存取被拒。
+[2023-07-17 06:22:31Z INFO JobExtension] Inspecting process environment variables. PID: 20144 (SearchFilterHost)
+[2023-07-17 06:22:31Z WARN JobExtension] Ignore exception during read process environment variables: 存取被拒。
+[2023-07-17 06:22:31Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "8ce4db1d-7085-4751-98c7-e723c51eb1be",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:31.0146175Z",
+  "finishTime": "2023-07-17T06:22:31.0281085Z"
+}.
+[2023-07-17 06:22:31Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2023-07-17 06:22:31Z INFO JobRunner] Completing the job execution context.
+[2023-07-17 06:22:31Z INFO JobRunner] Shutting down the job server queue.
+[2023-07-17 06:22:31Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-07-17 06:22:31Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-07-17 06:22:32Z INFO JobServerQueue] All queue process task stopped.
+[2023-07-17 06:22:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8ce4db1d-7085-4751-98c7-e723c51eb1be', success rate: 1/1.
+[2023-07-17 06:22:32Z INFO JobServerQueue] Web console line queue drained.
+[2023-07-17 06:22:32Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2023-07-17 06:22:33Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2023-07-17 06:22:33Z INFO JobServerQueue] File upload queue drained.
+[2023-07-17 06:22:33Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-07-17 06:22:33Z INFO JobServerQueue] Results upload queue drained.
+[2023-07-17 06:22:34Z INFO JobServerQueue] Timeline update queue drained.
+[2023-07-17 06:22:34Z INFO JobServerQueue] Disposing job server ...
+[2023-07-17 06:22:34Z INFO JobServerQueue] Disposing results server ...
+[2023-07-17 06:22:34Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-07-17 06:22:34Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp
+[2023-07-17 06:22:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:34Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:34Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag\.telemetry'
+[2023-07-17 06:22:34Z INFO JobRunner] Raising job completed event
+[2023-07-17 06:22:34Z INFO Worker] Job completed.

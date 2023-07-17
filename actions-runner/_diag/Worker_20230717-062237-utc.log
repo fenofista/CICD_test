@@ -1,0 +1,3561 @@
+[2023-07-17 06:22:37Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'Runner': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner'
+[2023-07-17 06:22:37Z INFO Worker] Version: 2.306.0
+[2023-07-17 06:22:37Z INFO Worker] Commit: da6dfe9110e494c9c0f375d9d0e1deff824b1e50
+[2023-07-17 06:22:37Z INFO Worker] Culture: zh-TW
+[2023-07-17 06:22:37Z INFO Worker] UI Culture: zh-TW
+[2023-07-17 06:22:37Z INFO Worker] Waiting to receive the job message from the channel.
+[2023-07-17 06:22:37Z INFO ProcessChannel] Receiving message of length 27381, with hash 'bd2a6af054d9d75e8eba1b49a5fb8215feec72409f33f9b6f343241ba50e35af'
+[2023-07-17 06:22:37Z INFO Worker] Message received.
+[2023-07-17 06:22:37Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/CICD.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "contextName": "__actions_checkout",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 22,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 9,
+              "lit": "token"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 22,
+              "col": 16,
+              "expr": "secrets.GH_TOKEN_TEST"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "ea1ec936-c63e-5179-2aa2-04da5a5ceddd",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-python",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 3,
+        "file": 1,
+        "line": 23,
+        "col": 13,
+        "expr": "format('Set up Python {0}', matrix.python-version)"
+      },
+      "contextName": "__actions_setup-python",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 26,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 9,
+              "lit": "python-version"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 26,
+              "col": 25,
+              "expr": "matrix.python-version"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "343f183f-0c51-507a-bc97-253f52a97a90",
+      "name": "__actions_setup-python"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 29,
+        "col": 13,
+        "lit": "Install Dependencies"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 12,
+              "lit": "python -m pip install --upgrade pip\npip install -r Program/requirement.txt\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d931e820-c2c2-53b7-f055-9e5a6e8823ef",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 33,
+        "col": 13,
+        "lit": "Infernece"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 34,
+              "col": 13,
+              "lit": "cd Program\npython XGB_inference.py\npython RF_inference.py\npython DTB_inference.py\ncd ..\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 40,
+        "col": 13,
+        "lit": "CD"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 41,
+              "col": 12,
+              "lit": "cd C:\\Users\\oplab\\Desktop\\CICD_test\ngit pull https://github.com/fenofista/CICD_test.git\ncd Program\npython main.py\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "052daa24-5f49-5773-d562-2094f3e133be",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 46,
+        "col": 13,
+        "lit": "commit"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 47,
+              "col": 12,
+              "lit": "cd C:\\Users\\oplab\\Desktop\\CICD_test\ngit config --local user.email \"s960068sss@github.com\"\ngit config --local user.name \"fenofista\"\ngit add .\ngit commit -m \"training\"\ngit push\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "89858131-5e73-5223-9cfa-bce1cb2d6969",
+      "name": "__run_4"
+    }
+  ],
+  "variables": {
+    "GH_TOKEN_TEST": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2023-07-17 06:22:35+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "4302"
+    },
+    "build.containerId": {
+      "value": "8334830"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/CICD.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build._3_7"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build (3.7)"
+    },
+    "system.jobId": {
+      "value": "67ed64bb-753b-5011-a982-1e8d3d23108b"
+    },
+    "system.jobName": {
+      "value": "_3_7"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.orchestrationId": {
+      "value": "19f3e358-4421-4309-9ff8-46b243a69c53.build._3_7"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 32,
+    "planId": "19f3e358-4421-4309-9ff8-46b243a69c53",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/4302",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "CICD_test"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "fenofista"
+    }
+  },
+  "timeline": {
+    "id": "19f3e358-4421-4309-9ff8-46b243a69c53",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "67ed64bb-753b-5011-a982-1e8d3d23108b",
+  "jobDisplayName": "build (3.7)",
+  "jobName": "_3_7",
+  "requestId": 4302,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "c16a9fdc-2298-41d4-a20d-caa7a95363a1",
+          "ServerName": "0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/",
+          "GenerateIdTokenUrl": "https://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/19f3e358-4421-4309-9ff8-46b243a69c53/jobs/67ed64bb-753b-5011-a982-1e8d3d23108b/idtoken?api-version=2.0",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/19f3e358-4421-4309-9ff8-46b243a69c53/timelines/19f3e358-4421-4309-9ff8-46b243a69c53/records/67ed64bb-753b-5011-a982-1e8d3d23108b/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "5ae223d6bea16a038c18f3ad74825a7adf9053db"
+        },
+        {
+          "k": "repository",
+          "v": "fenofista/CICD_test"
+        },
+        {
+          "k": "repository_owner",
+          "v": "fenofista"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "101687024"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/fenofista/CICD_test.git"
+        },
+        {
+          "k": "run_id",
+          "v": "5572399419"
+        },
+        {
+          "k": "run_number",
+          "v": "4304"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repo-self-hosted-runners-disabled",
+          "v": false
+        },
+        {
+          "k": "repository_id",
+          "v": "650907833"
+        },
+        {
+          "k": "actor_id",
+          "v": "101687024"
+        },
+        {
+          "k": "actor",
+          "v": "fenofista"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "fenofista"
+        },
+        {
+          "k": "workflow",
+          "v": "Hight_blood_pressure CICD"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "5ae223d6bea16a038c18f3ad74825a7adf9053db"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "f1a72971c59f1165dca86350cdcfc3b5478368cb"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "101687024+fenofista@users.noreply.github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "fenofista"
+                              },
+                              {
+                                "k": "username",
+                                "v": "fenofista"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noreply@github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "GitHub"
+                              },
+                              {
+                                "k": "username",
+                                "v": "web-flow"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "5ae223d6bea16a038c18f3ad74825a7adf9053db"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Update CICD.yml"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-07-17T14:18:27+08:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "0d531af6b55ccf449fa64ac5e6f09039e563193b"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/fenofista/CICD_test/commit/5ae223d6bea16a038c18f3ad74825a7adf9053db"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/fenofista/CICD_test/compare/f1a72971c59f...5ae223d6bea1"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "101687024+fenofista@users.noreply.github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "fenofista"
+                          },
+                          {
+                            "k": "username",
+                            "v": "fenofista"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noreply@github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GitHub"
+                          },
+                          {
+                            "k": "username",
+                            "v": "web-flow"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "5ae223d6bea16a038c18f3ad74825a7adf9053db"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Update CICD.yml"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2023-07-17T14:18:27+08:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "0d531af6b55ccf449fa64ac5e6f09039e563193b"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/fenofista/CICD_test/commit/5ae223d6bea16a038c18f3ad74825a7adf9053db"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "101687024+fenofista@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "fenofista"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/fenofista/CICD_test.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1686198649.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "fenofista/CICD_test"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/fenofista/CICD_test.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/fenofista/CICD_test"
+                    },
+                    {
+                      "k": "id",
+                      "v": 650907833.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Python"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "CICD_test"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOJswQuQ"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/101687024?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "101687024+fenofista@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/fenofista/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/fenofista/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/fenofista/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/fenofista/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/fenofista"
+                          },
+                          {
+                            "k": "id",
+                            "v": 101687024.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "fenofista"
+                          },
+                          {
+                            "k": "name",
+                            "v": "fenofista"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBg-e8A"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/fenofista/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/fenofista/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/fenofista/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/fenofista/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/fenofista/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/fenofista"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1689574707.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 3422.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:fenofista/CICD_test.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/fenofista/CICD_test"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/fenofista/CICD_test/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2023-06-08T04:34:40Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/fenofista/CICD_test"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/101687024?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/fenofista/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/fenofista/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/fenofista/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/fenofista/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/fenofista"
+                    },
+                    {
+                      "k": "id",
+                      "v": 101687024.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "fenofista"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBg-e8A"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/fenofista/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/fenofista/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/fenofista/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/fenofista/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/fenofista/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/fenofista"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "fenofista/CICD_test/.github/workflows/CICD.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "5ae223d6bea16a038c18f3ad74825a7adf9053db"
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": {
+      "t": 2,
+      "d": [
+        {
+          "k": "python-version",
+          "v": 3.7
+        }
+      ]
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 4.0
+        }
+      ]
+    }
+  }
+}
+[2023-07-17 06:22:37Z INFO JobRunner] Job ID 67ed64bb-753b-5011-a982-1e8d3d23108b
+[2023-07-17 06:22:37Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/
+[2023-07-17 06:22:37Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\oplab\Desktop\CICD_test\actions-runner\bin\Runner.Worker.dll
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] binPath: C:\Users\oplab\Desktop\CICD_test\actions-runner\bin
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] RootFolder: C:\Users\oplab\Desktop\CICD_test\actions-runner
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'Runner': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] ConfigFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] CredFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_migrated'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_migrated
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:37Z INFO HostContext] Well known config file 'Service': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.service'
+[2023-07-17 06:22:37Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.service
+[2023-07-17 06:22:37Z INFO ConfigurationStore] Read setting file: 300 chars
+[2023-07-17 06:22:37Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-17 06:22:38Z INFO Worker] Listening for cancel message from the channel.
+[2023-07-17 06:22:38Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2023-07-17 06:22:38Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-17 06:22:38Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/19f3e358-4421-4309-9ff8-46b243a69c53/timelines/19f3e358-4421-4309-9ff8-46b243a69c53/records/67ed64bb-753b-5011-a982-1e8d3d23108b/feedstream?api-version=6.0-preview
+[2023-07-17 06:22:38Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2023-07-17 06:22:38Z INFO JobServerQueue] Start process web console line queue.
+[2023-07-17 06:22:38Z INFO JobServerQueue] Start process file upload queue.
+[2023-07-17 06:22:38Z INFO JobServerQueue] Start results file upload queue.
+[2023-07-17 06:22:38Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-07-17 06:22:38Z INFO JobServerQueue] Start process timeline update queue.
+[2023-07-17 06:22:38Z INFO ExecutionContext] Initialize GitHub context
+[2023-07-17 06:22:38Z INFO ExecutionContext] Initialize Env context
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:38Z INFO JobRunner] Starting the job execution context.
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:38Z INFO JobRunner] Validating directory permissions for: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Tools': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_tool'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:38Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:39Z INFO JobRunner] Getting job extension.
+[2023-07-17 06:22:39Z INFO JobRunner] Initialize job. Getting all job steps.
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.setup_info'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_PipelineMapping\fenofista/CICD_test\PipelineFolder.json
+[2023-07-17 06:22:39Z INFO PipelineDirectoryManager] Updating job run properties.
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO JobExtension] Downloading actions
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:39Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/c85c95e3d7251135ab7dc9ce3241c5835cc595a9' into C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\_temp_a32e37ae-ba83-41b1-9c6d-e6bd513b59ea\c4b91824-161f-4e72-9538-ada711e8a006.zip.
+[2023-07-17 06:22:39Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2023-07-17 06:22:39Z INFO JobServer] Successfully started websocket client.
+[2023-07-17 06:22:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7fa8c281-2638-4895-a08e-2bd0b3373730', success rate: 1/1.
+[2023-07-17 06:22:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7fa8c281-2638-4895-a08e-2bd0b3373730', success rate: 1/1.
+[2023-07-17 06:22:40Z INFO ActionManager] Finished getting action repository.
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:40Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-python/zipball/3542bca2639a428e1796aaa6a2ffef0c0f575566' into C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\_temp_dfbc2bae-041d-4a92-86bd-8a87593680e4\8551db57-2f1a-4949-8aa6-e55c7a29f28c.zip.
+[2023-07-17 06:22:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7fa8c281-2638-4895-a08e-2bd0b3373730', success rate: 1/1.
+[2023-07-17 06:22:41Z INFO ActionManager] Finished getting action repository.
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:41Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:42Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:42Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:42Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-07-17 06:22:42Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Ignore action property author.
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Ignore action property branding.
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Python",
+  "description": "Set up a specific version of Python and add the command-line tools to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 6,
+          "col": 3,
+          "lit": "python-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 14,
+          "lit": "3.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 9,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:42Z INFO ActionManager] Action node.js file: dist/setup/index.js, no more preparation.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\setup-python\v3'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Ignore action property author.
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Ignore action property branding.
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Python",
+  "description": "Set up a specific version of Python and add the command-line tools to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 6,
+          "col": 3,
+          "lit": "python-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 14,
+          "lit": "3.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 9,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:42Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:42Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2023-07-17 06:22:42Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO JobExtension] Adding .
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO JobExtension] Total accessible running process: 232.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "7fa8c281-2638-4895-a08e-2bd0b3373730",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 4,
+  "startTime": "2023-07-17T06:22:39.0172984Z",
+  "finishTime": "2023-07-17T06:22:42.0807907Z"
+}.
+[2023-07-17 06:22:42Z INFO JobRunner] Total job steps: 6.
+[2023-07-17 06:22:42Z INFO JobRunner] Waiting for job to be marked as started.
+[2023-07-17 06:22:42Z INFO JobRunner] Run all job steps.
+[2023-07-17 06:22:42Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v3'
+[2023-07-17 06:22:42Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:42Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:42Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:42Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7fa8c281-2638-4895-a08e-2bd0b3373730', success rate: 1/1.
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] Process started with process id 2092, waiting for process exit.
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] Finished process 2092 with exit code 0, and elapsed time 00:00:00.0697267.
+[2023-07-17 06:22:42Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:42Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:42Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-07-17 06:22:42Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-07-17 06:22:42Z INFO ExecutionContext] Reserve record order 8 to 14 for post job actions.
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:42Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:42Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "fenofista/CICD_test"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:42Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2023-07-17 06:22:42Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:42Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:42Z INFO HostContext] Well known directory 'Externals': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals\node16\bin\node.exe'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:42Z INFO ProcessInvokerWrapper] Process started with process id 22796, waiting for process exit.
+[2023-07-17 06:22:42Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2023-07-17 06:22:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:43Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:22:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Finished process 22796 with exit code 0, and elapsed time 00:00:02.3371273.
+[2023-07-17 06:22:44Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_eb25ed2e-8e40-41a6-8318-7dacaf76f03c) is empty; skipping attachment upload
+[2023-07-17 06:22:44Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:44Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Main",
+  "stepId": "ea1ec936-c63e-5179-2aa2-04da5a5ceddd",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2023-07-17T06:22:42.0923849Z",
+  "finishTime": "2023-07-17T06:22:44.5630457Z"
+}.
+[2023-07-17 06:22:44Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:44Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:44Z INFO StepsRunner] Processing step: DisplayName='Set up Python 3.7'
+[2023-07-17 06:22:44Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:44Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:44Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:44Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Process started with process id 12028, waiting for process exit.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Finished process 12028 with exit code 0, and elapsed time 00:00:00.0060023.
+[2023-07-17 06:22:44Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:44Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\setup-python\v3'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Ignore action property author.
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Ignore action property branding.
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Python",
+  "description": "Set up a specific version of Python and add the command-line tools to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 6,
+          "col": 3,
+          "lit": "python-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 14,
+          "lit": "3.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 9,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:44Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:44Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2023-07-17 06:22:44Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:44Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:44Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Input 'cache': default value evaluate result: ""
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Input 'architecture': default value evaluate result: ""
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 16,
+  "col": 14,
+  "lit": "***"
+}
+[2023-07-17 06:22:44Z INFO ActionManifestManager] Input 'cache-dependency-path': default value evaluate result: ""
+[2023-07-17 06:22:44Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Externals': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals\node16\bin\node.exe'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\setup-python\v3\dist/setup/index.js"'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Process started with process id 1424, waiting for process exit.
+[2023-07-17 06:22:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ea1ec936-c63e-5179-2aa2-04da5a5ceddd', success rate: 1/1.
+[2023-07-17 06:22:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record '343f183f-0c51-507a-bc97-253f52a97a90', success rate: 1/1.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Finished process 1424 with exit code 0, and elapsed time 00:00:00.1424614.
+[2023-07-17 06:22:44Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_7447ca17-c85d-46ee-9800-16d27d45a3d2) is empty; skipping attachment upload
+[2023-07-17 06:22:44Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:44Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/setup-python",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Main",
+  "stepId": "343f183f-0c51-507a-bc97-253f52a97a90",
+  "stepContextName": "__actions_setup-python",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:44.5637099Z",
+  "finishTime": "2023-07-17T06:22:44.7267539Z"
+}.
+[2023-07-17 06:22:44Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:44Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:44Z INFO StepsRunner] Processing step: DisplayName='Install Dependencies'
+[2023-07-17 06:22:44Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:44Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:44Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:44Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Process started with process id 11272, waiting for process exit.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Finished process 11272 with exit code 0, and elapsed time 00:00:00.0059060.
+[2023-07-17 06:22:44Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:44Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:44Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:44Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:44Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:44Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:44Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:44Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:44Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:44Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\5e4dcf75-b7b1-4034-b1ae-53ea61d87999.ps1'"'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:44Z INFO ProcessInvokerWrapper] Process started with process id 2248, waiting for process exit.
+[2023-07-17 06:22:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:22:45Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:22:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:22:46Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2023-07-17 06:22:48Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd931e820-c2c2-53b7-f055-9e5a6e8823ef', success rate: 1/1.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Finished process 2248 with exit code 0, and elapsed time 00:00:06.1764575.
+[2023-07-17 06:22:50Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_a11bb2e1-494c-42fe-9e92-0b373629732c) is empty; skipping attachment upload
+[2023-07-17 06:22:50Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:50Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "d931e820-c2c2-53b7-f055-9e5a6e8823ef",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 7,
+  "startTime": "2023-07-17T06:22:44.7273815Z",
+  "finishTime": "2023-07-17T06:22:50.9369411Z"
+}.
+[2023-07-17 06:22:50Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:50Z INFO StepsRunner] Current state: job state = ''
+[2023-07-17 06:22:50Z INFO StepsRunner] Processing step: DisplayName='Infernece'
+[2023-07-17 06:22:50Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:50Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:50Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:50Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:50Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Process started with process id 13692, waiting for process exit.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Finished process 13692 with exit code 0, and elapsed time 00:00:00.0047286.
+[2023-07-17 06:22:50Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:50Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:50Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:50Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:50Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:50Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:50Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:50Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:50Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-17 06:22:50Z INFO ScriptHandler] Location: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   File name: 'C:\Program Files (x86)\PowerShell\7\pwsh.EXE'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\23fe8c56-b840-4083-bc98-825992274002.ps1'"'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:50Z INFO ProcessInvokerWrapper] Process started with process id 23364, waiting for process exit.
+[2023-07-17 06:22:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 1/1.
+[2023-07-17 06:22:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 1/1.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Finished process 23364 with exit code 1, and elapsed time 00:00:00.5276955.
+[2023-07-17 06:22:51Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_48b060ba-e619-4e26-bcc0-c92c766ff8a6) is empty; skipping attachment upload
+[2023-07-17 06:22:51Z INFO StepsRunner] Step result: Failed
+[2023-07-17 06:22:51Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "pwsh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943",
+  "stepContextName": "__run_2",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:50.9376339Z",
+  "finishTime": "2023-07-17T06:22:51.4854523Z"
+}.
+[2023-07-17 06:22:51Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2023-07-17 06:22:51Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-07-17 06:22:51Z INFO StepsRunner] Processing step: DisplayName='CD'
+[2023-07-17 06:22:51Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:51Z INFO StepsRunner] Result: false
+[2023-07-17 06:22:51Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-07-17 06:22:51Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-07-17 06:22:51Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-07-17 06:22:51Z INFO StepsRunner] Processing step: DisplayName='commit'
+[2023-07-17 06:22:51Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:51Z INFO StepsRunner] Result: false
+[2023-07-17 06:22:51Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-07-17 06:22:51Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-07-17 06:22:51Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-07-17 06:22:51Z INFO StepsRunner] Processing step: DisplayName='Post Set up Python 3.7'
+[2023-07-17 06:22:51Z INFO StepsRunner] Evaluating: success()
+[2023-07-17 06:22:51Z INFO StepsRunner] Result: false
+[2023-07-17 06:22:51Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-07-17 06:22:51Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-07-17 06:22:51Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-07-17 06:22:51Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v3'
+[2023-07-17 06:22:51Z INFO StepsRunner] Evaluating: always()
+[2023-07-17 06:22:51Z INFO StepsRunner] Result: true
+[2023-07-17 06:22:51Z INFO StepsRunner] Starting the step.
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO StepsRunner] Which: 'chcp'
+[2023-07-17 06:22:51Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Process started with process id 13424, waiting for process exit.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Finished process 13424 with exit code 0, and elapsed time 00:00:00.0065273.
+[2023-07-17 06:22:51Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:51Z INFO ActionManager] Load action that reference repository from 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Actions': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions'
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-07-17 06:22:51Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-07-17 06:22:51Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-07-17 06:22:51Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:51Z INFO ExecutionContext] Write event payload to C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Temp': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp'
+[2023-07-17 06:22:51Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "fenofista/CICD_test"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2023-07-17 06:22:51Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2023-07-17 06:22:51Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-17 06:22:51Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:51Z INFO HostContext] Well known directory 'Externals': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\externals\node16\bin\node.exe'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\CICD_test\CICD_test'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-17 06:22:51Z INFO ProcessInvokerWrapper] Process started with process id 6124, waiting for process exit.
+[2023-07-17 06:22:51Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2023-07-17 06:22:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'fdbf1f4d-6e54-5ecb-f03c-7ccc2282d943', success rate: 1/1.
+[2023-07-17 06:22:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '556dc41a-8c96-403c-b2a5-7900f0f8b924', success rate: 1/1.
+[2023-07-17 06:22:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '556dc41a-8c96-403c-b2a5-7900f0f8b924', success rate: 1/1.
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_work'
+[2023-07-17 06:22:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '556dc41a-8c96-403c-b2a5-7900f0f8b924', success rate: 1/1.
+[2023-07-17 06:22:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:22:52Z INFO ProcessInvokerWrapper] Finished process 6124 with exit code 0, and elapsed time 00:00:01.0349851.
+[2023-07-17 06:22:52Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp\_runner_file_commands\step_summary_d5a91286-7366-46d9-9cea-40a513351224) is empty; skipping attachment upload
+[2023-07-17 06:22:52Z INFO StepsRunner] Step result: 
+[2023-07-17 06:22:52Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Post",
+  "stepId": "556dc41a-8c96-403c-b2a5-7900f0f8b924",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2023-07-17T06:22:51.4877232Z",
+  "finishTime": "2023-07-17T06:22:52.5432689Z"
+}.
+[2023-07-17 06:22:52Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-17 06:22:52Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-07-17 06:22:52Z INFO JobRunner] Finalize job.
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:52Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:52Z INFO JobExtension] Initialize Env context
+[2023-07-17 06:22:52Z INFO JobExtension] Initialize steps context
+[2023-07-17 06:22:52Z INFO JobExtension] Total accessible running process: 232.
+[2023-07-17 06:22:52Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "af3b0f35-7ae9-4eec-b34b-6143ed57a29c",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-17T06:22:52.5506745Z",
+  "finishTime": "2023-07-17T06:22:52.5552999Z"
+}.
+[2023-07-17 06:22:52Z INFO JobRunner] Job result after all job steps finish: Failed
+[2023-07-17 06:22:52Z INFO JobRunner] Completing the job execution context.
+[2023-07-17 06:22:52Z INFO JobRunner] Shutting down the job server queue.
+[2023-07-17 06:22:52Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-07-17 06:22:52Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-07-17 06:22:53Z INFO JobServerQueue] All queue process task stopped.
+[2023-07-17 06:22:53Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'af3b0f35-7ae9-4eec-b34b-6143ed57a29c', success rate: 1/1.
+[2023-07-17 06:22:53Z INFO JobServerQueue] Web console line queue drained.
+[2023-07-17 06:22:53Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2023-07-17 06:22:55Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2023-07-17 06:22:55Z INFO JobServerQueue] File upload queue drained.
+[2023-07-17 06:22:55Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-07-17 06:22:55Z INFO JobServerQueue] Results upload queue drained.
+[2023-07-17 06:22:55Z INFO JobServerQueue] Timeline update queue drained.
+[2023-07-17 06:22:55Z INFO JobServerQueue] Disposing job server ...
+[2023-07-17 06:22:55Z INFO JobServerQueue] Disposing results server ...
+[2023-07-17 06:22:55Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-07-17 06:22:55Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_temp
+[2023-07-17 06:22:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:22:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:22:55Z INFO HostContext] Well known directory 'Diag': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag'
+[2023-07-17 06:22:55Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\_diag\.telemetry'
+[2023-07-17 06:22:55Z INFO JobRunner] Raising job completed event
+[2023-07-17 06:22:55Z INFO Worker] Job completed.
