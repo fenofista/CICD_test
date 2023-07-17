@@ -36,20 +36,20 @@ jobs:
         python RF_inference.py
         python DTB_inference.py
         cd ..
+    - name: commit
+      run: |
+          cd C:\Users\oplab\Desktop\CICD_test
+          git config --local user.email "s960068sss@github.com"
+          git config --local user.name "fenofista"
+          git add result
+          git commit -m "inference"
+          git push origin Result
     - name: CD
       run: |
           cd C:\Users\oplab\Desktop\CICD_test
           git pull https://github.com/fenofista/CICD_test.git
           cd Program
           python main.py
-    - name: commit
-      run: |
-          cd C:\Users\oplab\Desktop\CICD_test
-          git config --local user.email "s960068sss@github.com"
-          git config --local user.name "fenofista"
-          git add .
-          git commit -m "training"
-          git push origin Result
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
 #       with:
