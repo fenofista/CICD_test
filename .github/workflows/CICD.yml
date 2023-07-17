@@ -49,7 +49,7 @@ jobs:
           git config --local user.name "fenofista"
           git add .
           git commit -m "training"
-          git push 
+          git push origin Result
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
 #       with:
