@@ -1,44 +1,48 @@
 {
-  "after": "32b8d777453b902b96c62b9063ee2f235968eb6a",
+  "after": "1c8d88ff00488695742a4b688e24156f056384ca",
   "base_ref": null,
-  "before": "cc6f7bc741b1eccd99236ab0421543223a8f9e86",
+  "before": "25a7f5604f65428cef8a1a37c2f783ed6fe6f82f",
   "commits": [
     {
       "author": {
-        "email": "s960068sss@github.com",
-        "name": "fenofista"
+        "email": "101687024+fenofista@users.noreply.github.com",
+        "name": "fenofista",
+        "username": "fenofista"
       },
       "committer": {
-        "email": "s960068sss@github.com",
-        "name": "fenofista"
+        "email": "noreply@github.com",
+        "name": "GitHub",
+        "username": "web-flow"
       },
       "distinct": true,
-      "id": "32b8d777453b902b96c62b9063ee2f235968eb6a",
-      "message": "training",
-      "timestamp": "2023-07-17T14:29:21+08:00",
-      "tree_id": "94f402ba7f6e23826342bb7cf69e07bed3c20b51",
-      "url": "https://github.com/fenofista/CICD_test/commit/32b8d777453b902b96c62b9063ee2f235968eb6a"
+      "id": "1c8d88ff00488695742a4b688e24156f056384ca",
+      "message": "Update CICD.yml",
+      "timestamp": "2023-07-17T14:31:44+08:00",
+      "tree_id": "e1f9fc8c1760afbe5abcdfab24e8d9e4be2b0c86",
+      "url": "https://github.com/fenofista/CICD_test/commit/1c8d88ff00488695742a4b688e24156f056384ca"
     }
   ],
-  "compare": "https://github.com/fenofista/CICD_test/compare/cc6f7bc741b1...32b8d777453b",
+  "compare": "https://github.com/fenofista/CICD_test/compare/25a7f5604f65...1c8d88ff0048",
   "created": false,
   "deleted": false,
   "forced": false,
   "head_commit": {
     "author": {
-      "email": "s960068sss@github.com",
-      "name": "fenofista"
+      "email": "101687024+fenofista@users.noreply.github.com",
+      "name": "fenofista",
+      "username": "fenofista"
     },
     "committer": {
-      "email": "s960068sss@github.com",
-      "name": "fenofista"
+      "email": "noreply@github.com",
+      "name": "GitHub",
+      "username": "web-flow"
     },
     "distinct": true,
-    "id": "32b8d777453b902b96c62b9063ee2f235968eb6a",
-    "message": "training",
-    "timestamp": "2023-07-17T14:29:21+08:00",
-    "tree_id": "94f402ba7f6e23826342bb7cf69e07bed3c20b51",
-    "url": "https://github.com/fenofista/CICD_test/commit/32b8d777453b902b96c62b9063ee2f235968eb6a"
+    "id": "1c8d88ff00488695742a4b688e24156f056384ca",
+    "message": "Update CICD.yml",
+    "timestamp": "2023-07-17T14:31:44+08:00",
+    "tree_id": "e1f9fc8c1760afbe5abcdfab24e8d9e4be2b0c86",
+    "url": "https://github.com/fenofista/CICD_test/commit/1c8d88ff00488695742a4b688e24156f056384ca"
   },
   "pusher": {
     "email": "101687024+fenofista@users.noreply.github.com",
@@ -127,7 +131,7 @@
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/fenofista/CICD_test/pulls{/number}",
-    "pushed_at": 1689575363,
+    "pushed_at": 1689575505,
     "releases_url": "https://api.github.com/repos/fenofista/CICD_test/releases{/id}",
     "size": 3422,
     "ssh_url": "git@github.com:fenofista/CICD_test.git",

@@ -1,0 +1,218 @@
+﻿2023-07-17T06:46:47.1497590Z ##[group]Run cd C:\Users\oplab\Desktop\CICD_test
+2023-07-17T06:46:47.1498059Z [36;1mcd C:\Users\oplab\Desktop\CICD_test[0m
+2023-07-17T06:46:47.1498305Z [36;1mgit pull https://github.com/fenofista/CICD_test.git[0m
+2023-07-17T06:46:47.1498474Z [36;1mcd Program[0m
+2023-07-17T06:46:47.1498605Z [36;1mpython main.py[0m
+2023-07-17T06:46:47.1532963Z shell: C:\Program Files (x86)\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2023-07-17T06:46:47.1533108Z env:
+2023-07-17T06:46:47.1533269Z   pythonLocation: C:\Users\oplab\Desktop\CICD_test\actions-runner\_work\_tool\Python\3.7.9\x64
+2023-07-17T06:46:47.1533427Z ##[endgroup]
+2023-07-17T06:46:48.4873117Z From https://github.com/fenofista/CICD_test
+2023-07-17T06:46:48.4873523Z  * branch            HEAD       -> FETCH_HEAD
+2023-07-17T06:46:48.6242464Z Updating 25a7f56..8fc53fd
+2023-07-17T06:46:48.6242832Z Fast-forward
+2023-07-17T06:46:48.6359198Z  .github/workflows/CICD.yml | 6 +++---
+2023-07-17T06:46:48.6359437Z  1 file changed, 3 insertions(+), 3 deletions(-)
+2023-07-17T06:46:49.1041928Z C:\Users\oplab\anaconda3\lib\site-packages\scipy\__init__.py:146: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.24.3
+2023-07-17T06:46:49.1042321Z   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+2023-07-17T06:47:05.8192704Z main_oneTypeofResearchTarget
+2023-07-17T06:47:05.8192924Z processing:  1m_temp
+2023-07-17T06:47:05.8193066Z now processing:  XBG
+2023-07-17T06:47:05.8193180Z 7
+2023-07-17T06:47:05.8193279Z preceeding:  1 fold
+2023-07-17T06:47:05.8195594Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8196762Z preceeding:  2 fold
+2023-07-17T06:47:05.8197036Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8197244Z preceeding:  3 fold
+2023-07-17T06:47:05.8197414Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8197581Z cross validation result:
+2023-07-17T06:47:05.8197716Z Mean accuracy:0.55556
+2023-07-17T06:47:05.8197861Z Mean f1 score:0.35556
+2023-07-17T06:47:05.8197988Z confusion matrix:
+2023-07-17T06:47:05.8198133Z                     true positive  true negative
+2023-07-17T06:47:05.8198324Z predicted positive:             0              0
+2023-07-17T06:47:05.8198478Z predicted negative:             3              4
+2023-07-17T06:47:05.8198635Z total time :  0.7280235290527344
+2023-07-17T06:47:05.8198841Z now processing:  RF
+2023-07-17T06:47:05.8199012Z 7
+2023-07-17T06:47:05.8199225Z preceeding:  1 fold
+2023-07-17T06:47:05.8199443Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8199645Z preceeding:  2 fold
+2023-07-17T06:47:05.8199873Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8200093Z preceeding:  3 fold
+2023-07-17T06:47:05.8200321Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8200499Z cross validation result:
+2023-07-17T06:47:05.8200628Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8200757Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8200875Z confusion matrix:
+2023-07-17T06:47:05.8201017Z                     true positive  true negative
+2023-07-17T06:47:05.8201171Z predicted positive:             2              0
+2023-07-17T06:47:05.8201321Z predicted negative:             1              4
+2023-07-17T06:47:05.8201456Z total time :  2.105036973953247
+2023-07-17T06:47:05.8201585Z now processing:  DTB
+2023-07-17T06:47:05.8201701Z 7
+2023-07-17T06:47:05.8201805Z preceeding:  1 fold
+2023-07-17T06:47:05.8201961Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8202115Z preceeding:  2 fold
+2023-07-17T06:47:05.8202275Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8202428Z preceeding:  3 fold
+2023-07-17T06:47:05.8202581Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8202731Z cross validation result:
+2023-07-17T06:47:05.8202855Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8204518Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8204827Z confusion matrix:
+2023-07-17T06:47:05.8204973Z                     true positive  true negative
+2023-07-17T06:47:05.8205133Z predicted positive:             2              0
+2023-07-17T06:47:05.8205282Z predicted negative:             1              4
+2023-07-17T06:47:05.8205423Z total time :  1.228546380996704
+2023-07-17T06:47:05.8205505Z 
+2023-07-17T06:47:05.8205561Z processing:  3m_temp
+2023-07-17T06:47:05.8205691Z now processing:  XBG
+2023-07-17T06:47:05.8205802Z 7
+2023-07-17T06:47:05.8205906Z preceeding:  1 fold
+2023-07-17T06:47:05.8206068Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8206226Z preceeding:  2 fold
+2023-07-17T06:47:05.8206385Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8206541Z preceeding:  3 fold
+2023-07-17T06:47:05.8206692Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8206848Z cross validation result:
+2023-07-17T06:47:05.8206974Z Mean accuracy:0.55556
+2023-07-17T06:47:05.8207102Z Mean f1 score:0.35556
+2023-07-17T06:47:05.8207220Z confusion matrix:
+2023-07-17T06:47:05.8207361Z                     true positive  true negative
+2023-07-17T06:47:05.8207516Z predicted positive:             0              0
+2023-07-17T06:47:05.8207674Z predicted negative:             3              4
+2023-07-17T06:47:05.8207810Z total time :  0.6830506324768066
+2023-07-17T06:47:05.8207937Z now processing:  RF
+2023-07-17T06:47:05.8208050Z 7
+2023-07-17T06:47:05.8208153Z preceeding:  1 fold
+2023-07-17T06:47:05.8208349Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8208501Z preceeding:  2 fold
+2023-07-17T06:47:05.8208655Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8208808Z preceeding:  3 fold
+2023-07-17T06:47:05.8208958Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8209113Z cross validation result:
+2023-07-17T06:47:05.8209246Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8209366Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8209483Z confusion matrix:
+2023-07-17T06:47:05.8209620Z                     true positive  true negative
+2023-07-17T06:47:05.8209769Z predicted positive:             2              0
+2023-07-17T06:47:05.8209918Z predicted negative:             1              4
+2023-07-17T06:47:05.8210055Z total time :  2.108161449432373
+2023-07-17T06:47:05.8210180Z now processing:  DTB
+2023-07-17T06:47:05.8210295Z 7
+2023-07-17T06:47:05.8210400Z preceeding:  1 fold
+2023-07-17T06:47:05.8210558Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8210714Z preceeding:  2 fold
+2023-07-17T06:47:05.8210861Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8211008Z preceeding:  3 fold
+2023-07-17T06:47:05.8211161Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8211318Z cross validation result:
+2023-07-17T06:47:05.8211452Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8211599Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8211718Z confusion matrix:
+2023-07-17T06:47:05.8211854Z                     true positive  true negative
+2023-07-17T06:47:05.8212003Z predicted positive:             2              0
+2023-07-17T06:47:05.8212149Z predicted negative:             1              4
+2023-07-17T06:47:05.8212287Z total time :  1.2285468578338623
+2023-07-17T06:47:05.8212369Z 
+2023-07-17T06:47:05.8212420Z processing:  6m_temp
+2023-07-17T06:47:05.8212543Z now processing:  XBG
+2023-07-17T06:47:05.8212656Z 7
+2023-07-17T06:47:05.8212756Z preceeding:  1 fold
+2023-07-17T06:47:05.8212914Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8213064Z preceeding:  2 fold
+2023-07-17T06:47:05.8213217Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8213362Z preceeding:  3 fold
+2023-07-17T06:47:05.8213506Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8214170Z cross validation result:
+2023-07-17T06:47:05.8214402Z Mean accuracy:0.55556
+2023-07-17T06:47:05.8214526Z Mean f1 score:0.35556
+2023-07-17T06:47:05.8214640Z confusion matrix:
+2023-07-17T06:47:05.8214781Z                     true positive  true negative
+2023-07-17T06:47:05.8214930Z predicted positive:             0              0
+2023-07-17T06:47:05.8215077Z predicted negative:             3              4
+2023-07-17T06:47:05.8215217Z total time :  0.6849992275238037
+2023-07-17T06:47:05.8215343Z now processing:  RF
+2023-07-17T06:47:05.8215454Z 7
+2023-07-17T06:47:05.8215552Z preceeding:  1 fold
+2023-07-17T06:47:05.8215716Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8215871Z preceeding:  2 fold
+2023-07-17T06:47:05.8216030Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8216178Z preceeding:  3 fold
+2023-07-17T06:47:05.8216328Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8216480Z cross validation result:
+2023-07-17T06:47:05.8216611Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8216733Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8216848Z confusion matrix:
+2023-07-17T06:47:05.8216986Z                     true positive  true negative
+2023-07-17T06:47:05.8217286Z predicted positive:             2              0
+2023-07-17T06:47:05.8217442Z predicted negative:             1              4
+2023-07-17T06:47:05.8217579Z total time :  2.0825355052948
+2023-07-17T06:47:05.8217704Z now processing:  DTB
+2023-07-17T06:47:05.8217812Z 7
+2023-07-17T06:47:05.8217914Z preceeding:  1 fold
+2023-07-17T06:47:05.8218073Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8218259Z preceeding:  2 fold
+2023-07-17T06:47:05.8218412Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8218561Z preceeding:  3 fold
+2023-07-17T06:47:05.8218707Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8218871Z cross validation result:
+2023-07-17T06:47:05.8219001Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8219122Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8219237Z confusion matrix:
+2023-07-17T06:47:05.8219368Z                     true positive  true negative
+2023-07-17T06:47:05.8219519Z predicted positive:             2              0
+2023-07-17T06:47:05.8219664Z predicted negative:             1              4
+2023-07-17T06:47:05.8219806Z total time :  1.2205305099487305
+2023-07-17T06:47:05.8219888Z 
+2023-07-17T06:47:05.8219939Z processing:  9m_temp
+2023-07-17T06:47:05.8220063Z now processing:  XBG
+2023-07-17T06:47:05.8220168Z 7
+2023-07-17T06:47:05.8220270Z preceeding:  1 fold
+2023-07-17T06:47:05.8220428Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8220579Z preceeding:  2 fold
+2023-07-17T06:47:05.8220730Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8220878Z preceeding:  3 fold
+2023-07-17T06:47:05.8221027Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8221190Z cross validation result:
+2023-07-17T06:47:05.8221317Z Mean accuracy:0.55556
+2023-07-17T06:47:05.8221435Z Mean f1 score:0.35556
+2023-07-17T06:47:05.8221549Z confusion matrix:
+2023-07-17T06:47:05.8221680Z                     true positive  true negative
+2023-07-17T06:47:05.8221832Z predicted positive:             0              0
+2023-07-17T06:47:05.8221976Z predicted negative:             3              4
+2023-07-17T06:47:05.8222116Z total time :  0.6765093803405762
+2023-07-17T06:47:05.8222242Z now processing:  RF
+2023-07-17T06:47:05.8222350Z 7
+2023-07-17T06:47:05.8222447Z preceeding:  1 fold
+2023-07-17T06:47:05.8222601Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8222748Z preceeding:  2 fold
+2023-07-17T06:47:05.8222899Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8223048Z preceeding:  3 fold
+2023-07-17T06:47:05.8223309Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8223550Z cross validation result:
+2023-07-17T06:47:05.8223674Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8223792Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8223904Z confusion matrix:
+2023-07-17T06:47:05.8224048Z                     true positive  true negative
+2023-07-17T06:47:05.8224205Z predicted positive:             2              0
+2023-07-17T06:47:05.8224352Z predicted negative:             1              4
+2023-07-17T06:47:05.8224490Z total time :  2.080613374710083
+2023-07-17T06:47:05.8224621Z now processing:  DTB
+2023-07-17T06:47:05.8224734Z 7
+2023-07-17T06:47:05.8224839Z preceeding:  1 fold
+2023-07-17T06:47:05.8224998Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8225155Z preceeding:  2 fold
+2023-07-17T06:47:05.8225313Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8225468Z preceeding:  3 fold
+2023-07-17T06:47:05.8225621Z BorderlineSMOTE(k_neighbors=1, m_neighbors=2, random_state=0)
+2023-07-17T06:47:05.8225783Z cross validation result:
+2023-07-17T06:47:05.8225907Z Mean accuracy:0.83333
+2023-07-17T06:47:05.8226028Z Mean f1 score:0.77778
+2023-07-17T06:47:05.8226142Z confusion matrix:
+2023-07-17T06:47:05.8226281Z                     true positive  true negative
+2023-07-17T06:47:05.8226432Z predicted positive:             2              0
+2023-07-17T06:47:05.8226581Z predicted negative:             1              4
+2023-07-17T06:47:05.8226717Z total time :  1.2430148124694824
+2023-07-17T06:47:05.8226798Z 
