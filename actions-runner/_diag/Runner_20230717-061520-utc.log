@@ -180,3 +180,40 @@
 [2023-07-17 06:19:58Z INFO ProcessChannel] Sending message of length 27277, with hash '74e283a2b684a0ef8bba2636a5be8341723476605728183d2cbe4f4a616193a4'
 [2023-07-17 06:19:58Z INFO JobNotification] Entering JobStarted Notification
 [2023-07-17 06:19:58Z INFO JobNotification] Entering StartMonitor
+[2023-07-17 06:20:58Z INFO JobDispatcher] Successfully renew job request 4300, job is valid till 2023/7/17 上午 06:30:59
+[2023-07-17 06:21:33Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:33Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:21:33Z INFO ProcessInvokerWrapper] Finished process 24392 with exit code 100, and elapsed time 00:01:34.8314623.
+[2023-07-17 06:21:33Z INFO JobDispatcher] Worker finished for job 67ed64bb-753b-5011-a982-1e8d3d23108b. Code: 100
+[2023-07-17 06:21:33Z INFO JobDispatcher] finish job request for job 67ed64bb-753b-5011-a982-1e8d3d23108b with result: Succeeded
+[2023-07-17 06:21:33Z INFO Terminal] WRITE LINE: 2023-07-17 06:21:33Z: Job build (3.7) completed with result: Succeeded
+[2023-07-17 06:21:33Z INFO JobDispatcher] Stop renew job request for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:21:33Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 4300.
+[2023-07-17 06:21:33Z INFO JobNotification] Entering JobCompleted Notification
+[2023-07-17 06:21:33Z INFO JobNotification] Entering EndMonitor
+[2023-07-17 06:21:35Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:21:35Z INFO MessageListener] Message '4265' received from session 'db770b17-303e-4afe-a37b-2a9ba5801944'.
+[2023-07-17 06:21:35Z INFO Runner] Received job message of length 27269 from service, with hash '03fbe80fb1117bcab3a370d523079ee469524d4a562d2546e56756d74a022324'
+[2023-07-17 06:21:35Z INFO JobDispatcher] Job request 4301 for plan 1365a018-1c57-4cc3-ba9e-9046193b90b0 job 67ed64bb-753b-5011-a982-1e8d3d23108b received.
+[2023-07-17 06:21:35Z INFO JobDispatcher] Pull OrchestrationId 1365a018-1c57-4cc3-ba9e-9046193b90b0.build._3_7 from JWT claims
+[2023-07-17 06:21:35Z INFO JobDispatcher] Job request 67ed64bb-753b-5011-a982-1e8d3d23108b processed succeed.
+[2023-07-17 06:21:35Z INFO Terminal] WRITE LINE: 2023-07-17 06:21:35Z: Running job: build (3.7)
+[2023-07-17 06:21:35Z INFO JobDispatcher] Start renew job request 4301 for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:21:36Z INFO JobDispatcher] Successfully renew job request 4301, job is valid till 2023/7/17 上午 06:31:36
+[2023-07-17 06:21:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin\Runner.Worker.exe'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2364 2220'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-07-17 06:21:36Z INFO ProcessInvokerWrapper] Process started with process id 19480, waiting for process exit.
+[2023-07-17 06:21:36Z INFO JobDispatcher] Send job request message to worker for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:21:36Z INFO ProcessChannel] Sending message of length 27269, with hash '03fbe80fb1117bcab3a370d523079ee469524d4a562d2546e56756d74a022324'
+[2023-07-17 06:21:36Z INFO JobNotification] Entering JobStarted Notification
+[2023-07-17 06:21:36Z INFO JobNotification] Entering StartMonitor
