@@ -1,7 +1,7 @@
 {
-  "after": "6154fbb692977dad6daffab535a4382cf46c78c2",
+  "after": "159b28e40da9c48db42d96d8fef48c3315c03040",
   "base_ref": null,
-  "before": "86aa9a503ab1c7b288105b631484bb8fcc5a94a8",
+  "before": "6154fbb692977dad6daffab535a4382cf46c78c2",
   "commits": [
     {
       "author": {
@@ -15,14 +15,14 @@
         "username": "fenofista"
       },
       "distinct": true,
-      "id": "6154fbb692977dad6daffab535a4382cf46c78c2",
-      "message": "add model inference",
-      "timestamp": "2023-07-17T13:54:53+08:00",
-      "tree_id": "b4d34288e04da1063d29826c80b058e9a0e72afd",
-      "url": "https://github.com/fenofista/CICD_test/commit/6154fbb692977dad6daffab535a4382cf46c78c2"
+      "id": "159b28e40da9c48db42d96d8fef48c3315c03040",
+      "message": "add inference result",
+      "timestamp": "2023-07-17T13:59:24+08:00",
+      "tree_id": "a7bf78c1dc98234037dd71e0f63153f3d06ce14a",
+      "url": "https://github.com/fenofista/CICD_test/commit/159b28e40da9c48db42d96d8fef48c3315c03040"
     }
   ],
-  "compare": "https://github.com/fenofista/CICD_test/compare/86aa9a503ab1...6154fbb69297",
+  "compare": "https://github.com/fenofista/CICD_test/compare/6154fbb69297...159b28e40da9",
   "created": false,
   "deleted": false,
   "forced": false,
@@ -38,11 +38,11 @@
       "username": "fenofista"
     },
     "distinct": true,
-    "id": "6154fbb692977dad6daffab535a4382cf46c78c2",
-    "message": "add model inference",
-    "timestamp": "2023-07-17T13:54:53+08:00",
-    "tree_id": "b4d34288e04da1063d29826c80b058e9a0e72afd",
-    "url": "https://github.com/fenofista/CICD_test/commit/6154fbb692977dad6daffab535a4382cf46c78c2"
+    "id": "159b28e40da9c48db42d96d8fef48c3315c03040",
+    "message": "add inference result",
+    "timestamp": "2023-07-17T13:59:24+08:00",
+    "tree_id": "a7bf78c1dc98234037dd71e0f63153f3d06ce14a",
+    "url": "https://github.com/fenofista/CICD_test/commit/159b28e40da9c48db42d96d8fef48c3315c03040"
   },
   "pusher": {
     "email": "101687024+fenofista@users.noreply.github.com",
@@ -131,7 +131,7 @@
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/fenofista/CICD_test/pulls{/number}",
-    "pushed_at": 1689573303,
+    "pushed_at": 1689573570,
     "releases_url": "https://api.github.com/repos/fenofista/CICD_test/releases{/id}",
     "size": 3422,
     "ssh_url": "git@github.com:fenofista/CICD_test.git",

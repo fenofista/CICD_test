@@ -1,0 +1,182 @@
+[2023-07-17 06:15:20Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'Runner': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner'
+[2023-07-17 06:15:20Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2023-07-17 06:15:20Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2023-07-17 06:15:20Z INFO Listener] Version: 2.306.0
+[2023-07-17 06:15:20Z INFO Listener] Commit: da6dfe9110e494c9c0f375d9d0e1deff824b1e50
+[2023-07-17 06:15:20Z INFO Listener] Culture: zh-TW
+[2023-07-17 06:15:20Z INFO Listener] UI Culture: zh-TW
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO Listener] Validating directory permissions for: 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO CommandLineParser] Parse
+[2023-07-17 06:15:20Z INFO CommandLineParser] Parsing 1 args
+[2023-07-17 06:15:20Z INFO CommandLineParser] parsing argument
+[2023-07-17 06:15:20Z INFO CommandLineParser] HasArgs: False
+[2023-07-17 06:15:20Z INFO CommandLineParser] Adding Command: run
+[2023-07-17 06:15:20Z INFO Listener] Arguments parsed
+[2023-07-17 06:15:20Z INFO Runner] ExecuteCommand
+[2023-07-17 06:15:20Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\oplab\Desktop\CICD_test\actions-runner\bin\Runner.Listener.dll
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] binPath: C:\Users\oplab\Desktop\CICD_test\actions-runner\bin
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] RootFolder: C:\Users\oplab\Desktop\CICD_test\actions-runner
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'Runner': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] ConfigFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.runner
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] CredFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_migrated'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_migrated
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'Service': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.service'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\oplab\Desktop\CICD_test\actions-runner\.service
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'help': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'version': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'check': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Command 'configure': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Command 'remove': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Command 'warmup': 'False'
+[2023-07-17 06:15:20Z INFO ConfigurationManager] LoadSettings
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured()
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-17 06:15:20Z INFO ConfigurationManager] Is configured: True
+[2023-07-17 06:15:20Z INFO ConfigurationStore] Read setting file: 300 chars
+[2023-07-17 06:15:20Z INFO ConfigurationManager] Settings Loaded
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-07-17 06:15:20Z INFO CommandSettings] Command 'run': 'True'
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured()
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-17 06:15:20Z INFO ConfigurationManager] Is configured: True
+[2023-07-17 06:15:20Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2023-07-17 06:15:20Z INFO Runner] Set runner startup type - Manual
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'once': 'False'
+[2023-07-17 06:15:20Z INFO CommandSettings] Flag 'once': 'False'
+[2023-07-17 06:15:20Z INFO Runner] RunAsync
+[2023-07-17 06:15:20Z INFO ConfigurationManager] LoadSettings
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured()
+[2023-07-17 06:15:20Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-17 06:15:20Z INFO ConfigurationManager] Is configured: True
+[2023-07-17 06:15:20Z INFO ConfigurationManager] Settings Loaded
+[2023-07-17 06:15:20Z INFO MessageListener] {
+  "AgentId": 22,
+  "AgentName": "DESKTOP-KP98A9A",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/0UjyJyNzsHMgHldjBlmSIjpoNk6UTCrZBtYfgbEiRSbGb15cQr",
+  "GitHubUrl": "https://github.com/fenofista/CICD_test",
+  "WorkFolder": "_work"
+}
+[2023-07-17 06:15:20Z INFO MessageListener] Loading Credentials
+[2023-07-17 06:15:20Z INFO ConfigurationStore] HasCredentials()
+[2023-07-17 06:15:20Z INFO ConfigurationStore] stored True
+[2023-07-17 06:15:20Z INFO CredentialManager] GetCredentialProvider
+[2023-07-17 06:15:20Z INFO CredentialManager] Creating type OAuth
+[2023-07-17 06:15:20Z INFO CredentialManager] Creating credential type: OAuth
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\oplab\Desktop\CICD_test\actions-runner'
+[2023-07-17 06:15:20Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams'
+[2023-07-17 06:15:20Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:15:20Z INFO MessageListener] Attempt to create session.
+[2023-07-17 06:15:20Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-17 06:15:20Z INFO RunnerServer] EstablishVssConnection
+[2023-07-17 06:15:20Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-17 06:15:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-17 06:15:20Z INFO RunnerServer] EstablishVssConnection
+[2023-07-17 06:15:20Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-17 06:15:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-17 06:15:20Z INFO RunnerServer] EstablishVssConnection
+[2023-07-17 06:15:20Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-17 06:15:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-17 06:15:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-17 06:15:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-17 06:15:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-17 06:15:21Z INFO MessageListener] VssConnection created
+[2023-07-17 06:15:21Z INFO Terminal] WRITE LINE: 
+[2023-07-17 06:15:21Z INFO Terminal] WRITE LINE: 
+[2023-07-17 06:15:22Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:15:22Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:15:22Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2023-07-17 06:15:22Z INFO MessageListener] Session created.
+[2023-07-17 06:15:22Z INFO Terminal] WRITE LINE: Current runner version: '2.306.0'
+[2023-07-17 06:15:22Z INFO Terminal] WRITE LINE: 2023-07-17 06:15:22Z: Listening for Jobs
+[2023-07-17 06:15:22Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2023-07-17 06:15:27Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:15:27Z INFO MessageListener] Message '4263' received from session 'db770b17-303e-4afe-a37b-2a9ba5801944'.
+[2023-07-17 06:15:27Z INFO Runner] Received job message of length 27275 from service, with hash '5a4862dc0632f2b7539728f63f1df0aec1b90d51956c45d8aefe9e800bd08d54'
+[2023-07-17 06:15:27Z INFO JobDispatcher] Job request 4299 for plan 0ca8a041-a26c-467f-89ca-aef53c88824e job 67ed64bb-753b-5011-a982-1e8d3d23108b received.
+[2023-07-17 06:15:27Z INFO JobDispatcher] Pull OrchestrationId 0ca8a041-a26c-467f-89ca-aef53c88824e.build._3_7 from JWT claims
+[2023-07-17 06:15:27Z INFO Terminal] WRITE LINE: 2023-07-17 06:15:27Z: Running job: build (3.7)
+[2023-07-17 06:15:27Z INFO JobDispatcher] Start renew job request 4299 for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:15:27Z INFO JobDispatcher] Successfully renew job request 4299, job is valid till 2023/7/17 上午 06:25:27
+[2023-07-17 06:15:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin\Runner.Worker.exe'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2256 2268'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-07-17 06:15:27Z INFO ProcessInvokerWrapper] Process started with process id 15868, waiting for process exit.
+[2023-07-17 06:15:27Z INFO JobDispatcher] Send job request message to worker for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:15:27Z INFO ProcessChannel] Sending message of length 27275, with hash '5a4862dc0632f2b7539728f63f1df0aec1b90d51956c45d8aefe9e800bd08d54'
+[2023-07-17 06:15:27Z INFO JobNotification] Entering JobStarted Notification
+[2023-07-17 06:15:27Z INFO JobNotification] Entering StartMonitor
+[2023-07-17 06:16:27Z INFO JobDispatcher] Successfully renew job request 4299, job is valid till 2023/7/17 上午 06:26:28
+[2023-07-17 06:17:29Z INFO JobDispatcher] Successfully renew job request 4299, job is valid till 2023/7/17 上午 06:27:29
+[2023-07-17 06:18:30Z INFO JobDispatcher] Successfully renew job request 4299, job is valid till 2023/7/17 上午 06:28:30
+[2023-07-17 06:19:30Z INFO JobDispatcher] Successfully renew job request 4299, job is valid till 2023/7/17 上午 06:29:31
+[2023-07-17 06:19:55Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:19:55Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-17 06:19:55Z INFO ProcessInvokerWrapper] Finished process 15868 with exit code 102, and elapsed time 00:04:28.0544311.
+[2023-07-17 06:19:55Z INFO JobDispatcher] Worker finished for job 67ed64bb-753b-5011-a982-1e8d3d23108b. Code: 102
+[2023-07-17 06:19:55Z INFO JobDispatcher] finish job request for job 67ed64bb-753b-5011-a982-1e8d3d23108b with result: Failed
+[2023-07-17 06:19:55Z INFO Terminal] WRITE LINE: 2023-07-17 06:19:55Z: Job build (3.7) completed with result: Failed
+[2023-07-17 06:19:55Z INFO JobDispatcher] Stop renew job request for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:19:55Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 4299.
+[2023-07-17 06:19:55Z INFO JobNotification] Entering JobCompleted Notification
+[2023-07-17 06:19:55Z INFO JobNotification] Entering EndMonitor
+[2023-07-17 06:19:58Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\oplab\Desktop\CICD_test\actions-runner\.credentials_rsaparams
+[2023-07-17 06:19:58Z INFO MessageListener] Message '4264' received from session 'db770b17-303e-4afe-a37b-2a9ba5801944'.
+[2023-07-17 06:19:58Z INFO Runner] Received job message of length 27277 from service, with hash '74e283a2b684a0ef8bba2636a5be8341723476605728183d2cbe4f4a616193a4'
+[2023-07-17 06:19:58Z INFO JobDispatcher] Job request 4300 for plan a09b3f2e-8645-4269-be57-a1912a2d9c0f job 67ed64bb-753b-5011-a982-1e8d3d23108b received.
+[2023-07-17 06:19:58Z INFO JobDispatcher] Pull OrchestrationId a09b3f2e-8645-4269-be57-a1912a2d9c0f.build._3_7 from JWT claims
+[2023-07-17 06:19:58Z INFO JobDispatcher] Job request 67ed64bb-753b-5011-a982-1e8d3d23108b processed succeed.
+[2023-07-17 06:19:58Z INFO Terminal] WRITE LINE: 2023-07-17 06:19:58Z: Running job: build (3.7)
+[2023-07-17 06:19:58Z INFO JobDispatcher] Start renew job request 4300 for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:19:58Z INFO JobDispatcher] Successfully renew job request 4300, job is valid till 2023/7/17 上午 06:29:58
+[2023-07-17 06:19:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin\Runner.Worker.exe'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2364 2296'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\oplab\Desktop\CICD_test\actions-runner\bin'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-07-17 06:19:58Z INFO ProcessInvokerWrapper] Process started with process id 24392, waiting for process exit.
+[2023-07-17 06:19:58Z INFO JobDispatcher] Send job request message to worker for job 67ed64bb-753b-5011-a982-1e8d3d23108b.
+[2023-07-17 06:19:58Z INFO ProcessChannel] Sending message of length 27277, with hash '74e283a2b684a0ef8bba2636a5be8341723476605728183d2cbe4f4a616193a4'
+[2023-07-17 06:19:58Z INFO JobNotification] Entering JobStarted Notification
+[2023-07-17 06:19:58Z INFO JobNotification] Entering StartMonitor
