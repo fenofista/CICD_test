@@ -33,7 +33,9 @@ jobs:
     - name: Infernece
       run : |
         cd Program
-        python main.py
+        python XGB_inference.py
+        python RF_inference.py
+        python DTB_inference.py
         cd ..
     - name: CD
       run: |
