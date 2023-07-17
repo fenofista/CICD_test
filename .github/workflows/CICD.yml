@@ -32,7 +32,6 @@ jobs:
         pip install -r Program/requirement.txt
     - name: Infernece
       run : |
-        cd Program
         python XGB_inference.py
         python RF_inference.py
         python DTB_inference.py
