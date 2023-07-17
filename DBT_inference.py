@@ -20,6 +20,14 @@ y_true = test_data['CV']
 # Compute the accuracy of the model
 accuracy = accuracy_score(y_true, y_pred)
 
-
+result = {
+    "model_name":["DBT"],
+    "Accuracy":[accuracy]
+}
+import os
+if not os.path.exists("result"):
+    os.mkdir("result")
+result = pd.DataFrame(result)
+result.to_csv("result/DBT_result.csv", index=False)
 
 print("Accuracy:", accuracy)

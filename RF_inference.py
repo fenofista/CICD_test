@@ -21,4 +21,14 @@ y_true = test_data['CV']
 # Compute the accuracy of the model
 accuracy = accuracy_score(y_true, y_pred)
 
+result = {
+    "model_name":["RF"],
+    "Accuracy":[accuracy]
+}
+import os
+if not os.path.exists("result"):
+    os.mkdir("result")
+result = pd.DataFrame(result)
+result.to_csv("result/RF_result.csv", index=False)
+
 print("Accuracy:", accuracy)
